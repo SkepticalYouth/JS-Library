@@ -1,0 +1,44 @@
+html{
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header{
+    background-color: blue;
+    height: 7%;
+    display: flex;
+    align-items: center;
+}
+
+.new{
+    margin-left: 5vw;
+    
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input, select{
+    margin: 5px;
+}

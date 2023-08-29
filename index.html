@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="logic.js" defer></script>
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" defer>
+</head>
+<body>
+    <div class="header">
+        <button class="new">New</button>
+    </div>
+    <div>
+        <dialog id="add-dialog">
+            <form method="post">
+                <label>Add book</label>
+                <input type="text" placeholder="Author" required>
+                <input type="text" placeholder="Title" required>
+                <input type="number" placeholder="Pages" min="10">
+                <select>
+                    <option value="">Select your book status</option>
+                    <option value="reading">Reading</option>
+                    <option value="completed">Completed</option>
+                    <option value="onhold">On-hold</option>
+                    <option value="dropped">dropped</option>
+                </select>
+                <div>
+                    <button id='cancel' formmethod="dialog">Cancel</button>
+                    <button id="confirmBtn" value="default">Confirm</button>
+                  </div>
+            </form>
+        </dialog>
+    </div>
+    <div class="card-container"></div>
+</body>
+</html>
