@@ -31,6 +31,13 @@ body{
     display: flex;
     flex-direction: column;
     width: 20%;
+    border: solid;
+    margin: 15px;
+}
+
+.buttonDiv{
+    display: flex;
+    justify-content: center;
 }
 
 form{

@@ -13,12 +13,12 @@
     </div>
     <div>
         <dialog id="add-dialog">
-            <form method="post">
+            <form>
                 <label>Add book</label>
-                <input type="text" placeholder="Author" required>
-                <input type="text" placeholder="Title" required>
-                <input type="number" placeholder="Pages" min="10">
-                <select>
+                <input type="text" placeholder="Author" id="author" required>
+                <input type="text" placeholder="Title" id="title" required>
+                <input type="number" placeholder="Pages" id="pages" min="10">
+                <select id="status">
                     <option value="">Select your book status</option>
                     <option value="reading">Reading</option>
                     <option value="completed">Completed</option>
@@ -27,7 +27,7 @@
                 </select>
                 <div>
                     <button id='cancel' formmethod="dialog">Cancel</button>
-                    <button id="confirmBtn" value="default">Confirm</button>
+                    <button id="confirmBtn" onclick="processInfo()">Confirm</button>
                   </div>
             </form>
         </dialog>
