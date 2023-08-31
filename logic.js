@@ -19,6 +19,8 @@ document.getElementById('cancel').addEventListener('click', ()=>{
     document.getElementById('add-dialog').close()
 }) 
 
+
+//Add book to display container
 function displayBook(bookInfo){
     const bookElement = document.createElement('div');
     const buttonDiv = document.createElement('div')
@@ -33,6 +35,7 @@ function displayBook(bookInfo){
     document.querySelector('.card-container').appendChild(bookElement);
 }
 
+//Reset the dialog after clicking submit
 function resetDialog(){
     document.getElementById('author').value = ''
     document.getElementById('title').value = ''
@@ -41,6 +44,7 @@ function resetDialog(){
     readStatus.value= ""
 }
 
+//Fetching book info from submit field
 function confirmLibraryBook(Event){
     let bookInfo = []
     author = document.getElementById("author")
@@ -61,12 +65,26 @@ function confirmLibraryBook(Event){
     displayBook(newBook)
 }
 
+//Initialize logic for Confirm button
 function processInfo(){
     document.getElementById("confirmBtn").addEventListener('click', confirmLibraryBook)
     document.getElementById('confirmBtn').addEventListener('click', confirmLibraryBook)
 }
 
+function removeButton(){
+    let removeButtons = document.getElementsByClassName('remove')
+    for (let i = 0; i < removeButtons.length; i++) {
+        let button = removeButtons[i];
+        button.addEventListener('click', () => {
+            button.parentElement.parentElement.remove();
+            myLibrary.splice(i,1)
+        });
+    }
+}
+
 processInfo()
+document.addEventListener('click', removeButton)
+
 
 
 
